@@ -20,6 +20,5 @@ struct Question: Codable {
         case optionC = "option_c"
         case optionD = "option_d"
         case answer = "answer"
-    }
-    
+    }    
 }

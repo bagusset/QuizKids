@@ -27,7 +27,7 @@ class DataLoader {
         return categories
     }
     
-    static func getQuestion() -> [Question]{
+    static func getQuestion(questionID: Int) -> [Question]{
         var questions = [Question]()
         
         if let path = Bundle.main.url(forResource: questionFileName, withExtension: fileExtension) {
