@@ -47,35 +47,34 @@
                                     <segue destination="sq3-xm-Lib" kind="show" id="Wh7-gH-Y80"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="friends" translatesAutoresizingMaskIntoConstraints="NO" id="prm-NM-lLz">
-                                <rect key="frame" x="100" y="287" width="214" height="240"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="214" id="HVd-xu-E7N"/>
-                                    <constraint firstAttribute="height" constant="240" id="P3h-KR-Y8J"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuizKids" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVt-8n-yIf">
                                 <rect key="frame" x="79" y="171" width="266" height="72"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="friends" translatesAutoresizingMaskIntoConstraints="NO" id="prm-NM-lLz">
+                                <rect key="frame" x="100" y="295" width="214" height="240"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="prm-NM-lLz" firstAttribute="centerX" secondItem="EaM-wt-GQL" secondAttribute="centerX" id="Af0-hL-beV"/>
+                            <constraint firstItem="prm-NM-lLz" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.267857" id="7m3-WG-LLo"/>
                             <constraint firstAttribute="trailing" secondItem="aQI-Oo-GCv" secondAttribute="trailing" id="Biv-ih-46B"/>
                             <constraint firstItem="eVt-8n-yIf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="Cez-Yn-YAQ"/>
                             <constraint firstItem="aQI-Oo-GCv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Imd-tN-a7u"/>
                             <constraint firstAttribute="bottom" secondItem="aQI-Oo-GCv" secondAttribute="bottom" id="JUj-EM-qsQ"/>
                             <constraint firstItem="aQI-Oo-GCv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="K5c-qe-bjj"/>
                             <constraint firstAttribute="bottomMargin" secondItem="EaM-wt-GQL" secondAttribute="bottom" constant="118" id="LnO-ay-U3V"/>
+                            <constraint firstItem="prm-NM-lLz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-33" id="NB7-jD-22E"/>
+                            <constraint firstItem="prm-NM-lLz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZCz-wj-R3f"/>
                             <constraint firstItem="EaM-wt-GQL" firstAttribute="centerX" secondItem="aQI-Oo-GCv" secondAttribute="centerX" id="b1p-OD-FJ5"/>
+                            <constraint firstItem="prm-NM-lLz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bBn-v5-7zr"/>
                             <constraint firstItem="eVt-8n-yIf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="eWV-Rj-r6E"/>
-                            <constraint firstItem="prm-NM-lLz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="hev-FD-Mx6"/>
+                            <constraint firstItem="prm-NM-lLz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.516908" id="hcn-67-XAn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eVt-8n-yIf" secondAttribute="trailing" constant="69" id="nuH-BL-eGA"/>
-                            <constraint firstItem="EaM-wt-GQL" firstAttribute="top" secondItem="prm-NM-lLz" secondAttribute="bottom" constant="161" id="wKK-UA-0w8"/>
+                            <constraint firstItem="prm-NM-lLz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-33" id="voy-tn-4hE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fre-1h-Qrq"/>
@@ -87,7 +86,7 @@
         <!--Category Quiz-->
         <scene sceneID="IeF-rz-GGi">
             <objects>
-                <viewController id="sq3-xm-Lib" sceneMemberID="viewController">
+                <viewController id="sq3-xm-Lib" customClass="categoryVC" customModule="QuizKids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DRs-8m-EyW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,6 +134,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="sq3-xm-Lib" id="CI3-ig-0ik"/>
+                                    <outlet property="delegate" destination="sq3-xm-Lib" id="WoF-1w-F5c"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ci3-KV-13p"/>
@@ -147,15 +150,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Category Quiz" largeTitleDisplayMode="always" id="NtR-H4-X6i"/>
+                    <connections>
+                        <outlet property="categoryQuizTableView" destination="dvO-vC-ojg" id="dlZ-Ur-kf2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ybd-hw-eGJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="815.94202898550736" y="92.410714285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--QuizVC-->
         <scene sceneID="ksn-Li-0Bd">
             <objects>
-                <viewController id="pQq-RB-mMQ" sceneMemberID="viewController">
+                <viewController id="pQq-RB-mMQ" customClass="quizVC" customModule="QuizKids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5vT-7S-iom">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -274,6 +280,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="fI3-M7-iVQ"/>
+                    <connections>
+                        <outlet property="buttonA" destination="EPq-MH-bnJ" id="kd4-Ib-bwt"/>
+                        <outlet property="buttonB" destination="2vH-P1-Is3" id="fUY-t4-Viq"/>
+                        <outlet property="buttonC" destination="LjQ-QC-n18" id="cW0-rE-mo0"/>
+                        <outlet property="buttonD" destination="Jpv-Cg-58R" id="RD3-rp-Hix"/>
+                        <outlet property="progressBar" destination="CBb-Sq-BEU" id="uSf-gL-wID"/>
+                        <outlet property="questionImage" destination="yZN-fY-efQ" id="oMm-w9-Grj"/>
+                        <outlet property="questionLabel" destination="JyC-8C-iod" id="Y3D-y8-ob3"/>
+                        <outlet property="scoreLabel" destination="waZ-fQ-Cco" id="wjP-L1-Xgm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nn4-Em-NDC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
