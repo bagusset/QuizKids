@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F4EE042255974D700121B69 /* question.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F4EE040255974D700121B69 /* question.json */; };
+		0F4EE043255974D700121B69 /* category.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F4EE041255974D700121B69 /* category.json */; };
 		0FA150512557B70600C65476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA150502557B70600C65476 /* AppDelegate.swift */; };
 		0FA150532557B70600C65476 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA150522557B70600C65476 /* SceneDelegate.swift */; };
 		0FA150552557B70600C65476 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA150542557B70600C65476 /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F4EE040255974D700121B69 /* question.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = question.json; path = ../../../Asset/json/question.json; sourceTree = "<group>"; };
+		0F4EE041255974D700121B69 /* category.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = category.json; path = ../../../Asset/json/category.json; sourceTree = "<group>"; };
 		0FA1504D2557B70600C65476 /* QuizKids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizKids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FA150502557B70600C65476 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FA150522557B70600C65476 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F4EE03E255974A600121B69 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		0F4EE03F255974AD00121B69 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				0F4EE041255974D700121B69 /* category.json */,
+				0F4EE040255974D700121B69 /* question.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		0FA150442557B70600C65476 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +123,8 @@
 		0FA1504F2557B70600C65476 /* QuizKids */ = {
 			isa = PBXGroup;
 			children = (
+				0F4EE03E255974A600121B69 /* Util */,
+				0F4EE03F255974AD00121B69 /* JSON */,
 				0FA2E2D325583CFD00DDCEC5 /* Model */,
 				0FA2E2D525583D1000DDCEC5 /* Controller */,
 				0FA2E2D425583D0700DDCEC5 /* View */,
@@ -262,6 +284,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FA1505D2557B70900C65476 /* LaunchScreen.storyboard in Resources */,
+				0F4EE042255974D700121B69 /* question.json in Resources */,
+				0F4EE043255974D700121B69 /* category.json in Resources */,
 				0FA1505A2557B70900C65476 /* Assets.xcassets in Resources */,
 				0FA150582557B70600C65476 /* Main.storyboard in Resources */,
 			);
